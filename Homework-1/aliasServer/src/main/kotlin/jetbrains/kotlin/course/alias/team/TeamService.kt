@@ -7,15 +7,12 @@ import org.springframework.stereotype.Service
 @Service
 class TeamService {
 
-    // Create new teams ids
     private val identifierFactory = IdentifierFactory()
 
-    // Store teams
     companion object {
         val teamsStorage: MutableMap<Identifier, Team> = mutableMapOf()
     }
 
-    // Generate list of teams for one round
     fun generateTeamsForOneRound(teamsNumber: Int): List<Team> {
         val teams = mutableListOf<Team>()
 
